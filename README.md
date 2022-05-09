@@ -1,2 +1,1 @@
-install:
-  mv .gitconfig ../.
+#dotfiles
