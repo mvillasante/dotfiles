@@ -1,2 +1,15 @@
+all: install
+
+.PHONY: install
+
 install:
-  mv .gitconfig ../.
+	git clone --bare . $${HOME}/dotfiles.git
+	git --git-dir=$${HOME}/dotfiles.git --work-tree=$${HOME} checkout
+	git --git-dir=$${HOME}/dotfiles.git --work-tree=$${HOME} config --local status.showUntrackedFiles no
+
+pde:
+	mkdir --parent $${HOME}/repositorios
+	cd $${HOME}/repositorios && \
+	git clone https://github.com/devarops/pde.git && \
+	cd pde && \
+	make install
