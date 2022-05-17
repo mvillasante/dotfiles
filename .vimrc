@@ -19,5 +19,6 @@ set shiftwidth=4
 set expandtab
 syntax on
 
-set background=dark
-colorscheme evening
+set background=light
+let g:gruvbox_contrast_light = 'high'
+colorscheme gruvbox
