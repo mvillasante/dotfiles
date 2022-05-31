@@ -1,5 +1,6 @@
 filetype plugin on
 filetype indent on  
+set omnifunc=syntaxcomplete#Complete
 
 set incsearch
 set ignorecase
