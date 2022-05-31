@@ -13,12 +13,13 @@ set wildmode=list:longest
 
 set number
 set cursorline
-set textwidth=72
 set tabstop=4
 set shiftwidth=4
 set expandtab
 syntax on
 
+set laststatus=2
+set statusline+=%f
 set background=light
 let g:gruvbox_contrast_light = 'high'
 colorscheme gruvbox
