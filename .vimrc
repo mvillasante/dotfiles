@@ -4,6 +4,7 @@ set omnifunc=syntaxcomplete#Complete
 
 set incsearch
 set ignorecase
+set smartcase
 set showmatch
 set hlsearch
 
@@ -17,6 +18,7 @@ set cursorline
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set autoindent
 syntax on
 
 set laststatus=2
