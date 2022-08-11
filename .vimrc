@@ -8,6 +8,8 @@ set smartcase
 set showmatch
 set hlsearch
 
+set scrolloff = 5
+
 set showcmd
 set showmode
 set wildmenu
