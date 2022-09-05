@@ -2,6 +2,7 @@ filetype plugin on
 filetype indent on  
 set omnifunc=syntaxcomplete#Complete
 
+set noswapfile
 set incsearch
 set ignorecase
 set smartcase
