@@ -14,3 +14,6 @@ install:
 #	git clone https://github.com/devarops/pde.git && \
 #	cd pde && \
 #	make install
+
+# install_nvim:
+#	src/install_neovim.sh
