@@ -124,6 +124,7 @@ vim.o.termguicolors = true
 vim.cmd [[colorscheme evening]]
 
 -- Custom settings
+vim.o.tabstop = 4
 vim.o.wildmenu = true
 vim.o.setscrolloff = 5
 
