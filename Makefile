@@ -1,4 +1,4 @@
-all: install
+all: install install_nvim
 
 .PHONY: install
 
@@ -15,5 +15,5 @@ install:
 #	cd pde && \
 #	make install
 
-# install_nvim:
-#	src/install_neovim.sh
+install_nvim:
+	src/install_neovim.sh
