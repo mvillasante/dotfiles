@@ -125,7 +125,6 @@ vim.cmd [[colorscheme evening]]
 
 -- Custom settings
 vim.o.wildmenu = true
-vim.o.noswapfile = true
 vim.o.setscrolloff = 5
 
 -- Set completeopt to have a better completion experience
