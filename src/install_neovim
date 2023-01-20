@@ -8,7 +8,8 @@ set -euo pipefail
 # Install latest Neovim from GitHub
 cd "$HOME"
 wget --directory-prefix="$HOME" https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb
-apt remove neovim neovim-runtime
+apt remove neovim neovim-runtime --yes
+apt install unzip --yes
 apt install ./nvim-linux64.deb
 
 # Install packer.nvim
