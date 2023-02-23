@@ -348,7 +348,12 @@ local servers = {
   -- pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
-
+  docker_compose_language_service = {},
+  docker_langserver = {},
+  ltex = {
+    language = "es"
+  },
+  pylsp = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
