@@ -362,6 +362,7 @@ local servers = {
       telemetry = { enable = false },
     },
   },
+  jsonls = {},
 }
 
 -- Setup neovim lua configuration
