@@ -6,7 +6,6 @@
 set -euo pipefail
 
 # Install latest Neovim from GitHub
-apt remove neovim neovim-runtime --yes
 cd "$HOME"
 wget --directory-prefix="$HOME" https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
 chmod u+x "$HOME"/nvim.appimage
