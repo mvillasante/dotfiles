@@ -1,4 +1,4 @@
-all: install install_nvim
+all: install
 
 .PHONY: install
 
