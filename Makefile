@@ -8,7 +8,7 @@ install:
 	git --git-dir=$${HOME}/dotfiles.git --work-tree=$${HOME} config --local status.showUntrackedFiles no
 	git clone https://github.com/morhetz/gruvbox.git ~/.vim/pack/default/start/gruvbox
 	chown -R mvb:mvb $${HOME}
-	cp src/motd /etc/motd
+	cp dotfiles/src/motd /etc/motd
 	
 # pde:
 #	mkdir --parent $${HOME}/repositorios
