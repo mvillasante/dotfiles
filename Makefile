@@ -10,7 +10,7 @@ install: copy_motd
 	chown -R mvb:mvb $${HOME}
 
 copy_motd:
-	cp src/motd /etc/motd
+	cp ${{HOME}}/src/motd /etc/motd
 	
 # pde:
 #	mkdir --parent $${HOME}/repositorios
