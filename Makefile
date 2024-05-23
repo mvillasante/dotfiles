@@ -2,7 +2,9 @@ all: install copy_motd
 
 .PHONY: install
 
-install: copy_motd
+install: bare_clone copy_motd
+
+bare_clone:
 	git clone --bare . $${HOME}/dotfiles.git
 	git --git-dir=$${HOME}/dotfiles.git --work-tree=$${HOME} checkout
 	git --git-dir=$${HOME}/dotfiles.git --work-tree=$${HOME} config --local status.showUntrackedFiles no
@@ -10,7 +12,7 @@ install: copy_motd
 	chown -R mvb:mvb $${HOME}
 
 copy_motd:
-	cp ${{HOME}}/src/motd /etc/motd
+	cp ./src/motd /etc/motd
 	
 # pde:
 #	mkdir --parent $${HOME}/repositorios
