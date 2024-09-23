@@ -14,12 +14,5 @@ bare_clone:
 copy_motd:
 	cp ./src/motd /etc/motd
 	
-# pde:
-#	mkdir --parent $${HOME}/repositorios
-#	cd $${HOME}/repositorios && \
-#	git clone https://github.com/devarops/pde.git && \
-#	cd pde && \
-#	make install
-
 install_nvim:
 	src/install_neovim.sh
