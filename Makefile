@@ -18,7 +18,7 @@ install_compose:
 	chmod +x $(DOCKER_CONFIG)/cli-plugins/docker-compose
 	
 copy_motd:
-	cp $${HOME}/src/motd /etc/motd
+	cp /home/mvb/src/motd /etc/motd
 	
 install_nvim:
 	src/install_neovim.sh
