@@ -2,7 +2,7 @@ all: install install_compose copy_motd
 
 .PHONY: install
 
-install: bare_clone copy_motd
+install: install_compose bare_clone
 
 bare_clone:
 	git clone --bare . $${HOME}/dotfiles.git
