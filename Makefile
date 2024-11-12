@@ -1,10 +1,8 @@
-all: install install_compose copy_motd
+all: install
 
-.PHONY: install install_by_hand
+.PHONY: install_compose install_container_runner copy_motd
 
-install: install_compose bare_clone install_container_runner
-
-install_by_hand: install_compose install_container_runner
+install: install_compose install_container_runner copy_motd
 
 bare_clone:
 	git clone --bare . $${HOME}/dotfiles.git
@@ -23,7 +21,7 @@ install_container_runner:
 	pipx install container-runner==0.1.0
 	
 copy_motd:
-	cp /home/mvb/src/motd /etc/motd
+	sudo cp /home/mvb/src/motd /etc/motd
 	
 install_nvim:
 	src/install_neovim.sh
