@@ -1,8 +1,10 @@
 all: install install_compose copy_motd
 
-.PHONY: install
+.PHONY: install install_by_hand
 
-install: install_compose bare_clone
+install: install_compose bare_clone install_container_runner
+
+install_by_hand: install_compose install_container_runner
 
 bare_clone:
 	git clone --bare . $${HOME}/dotfiles.git
@@ -16,6 +18,9 @@ install_compose:
 	mkdir -p $(DOCKER_CONFIG)/cli-plugins
 	curl -SL https://github.com/docker/compose/releases/download/v2.29.4/docker-compose-linux-x86_64 -o $(DOCKER_CONFIG)/cli-plugins/docker-compose
 	chmod +x $(DOCKER_CONFIG)/cli-plugins/docker-compose
+
+install_container_runner:
+	pipx install container-runner==0.1.0
 	
 copy_motd:
 	cp /home/mvb/src/motd /etc/motd
