@@ -4,13 +4,6 @@ all: install
 
 install: install_compose install_container_runner copy_motd
 
-bare_clone:
-	git clone --bare . $${HOME}/dotfiles.git
-	git --git-dir=$${HOME}/dotfiles.git --work-tree=$${HOME} checkout
-	git --git-dir=$${HOME}/dotfiles.git --work-tree=$${HOME} config --local status.showUntrackedFiles no
-	git clone https://github.com/morhetz/gruvbox.git ~/.vim/pack/default/start/gruvbox
-	chown -R mvb:mvb $${HOME}
-
 DOCKER_CONFIG:=$${DOCKER_CONFIG:-$(HOME)/.docker}
 install_compose:
 	mkdir -p $(DOCKER_CONFIG)/cli-plugins
